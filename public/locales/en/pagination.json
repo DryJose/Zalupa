@@ -1,0 +1,8 @@
+{
+  "next": "next",
+  "previous": "previous",
+  "from": "from",
+  "to": "to",
+  "of": "of",
+  "paginationStatus": "from {{from}} to {{to}} of {{of}}"
+}

@@ -1,0 +1,8 @@
+{
+  "next": "следующая",
+  "previous": "предыдущая",
+  "from": "с",
+  "to": "по",
+  "of": "из",
+  "paginationStatus": "с {{from}} по {{to}} из {{of}}"
+}

@@ -1,0 +1,55 @@
+{
+  "name": "zanovo",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "format": "prettier --write \"**/*.{js,ts,tsx}\"",
+    "format-json": "prettier --write \"**/*.{md,json}\"",
+    "lint": "eslint . --ext ts --ext tsx --ext js --fix",
+    "type-check": "tsc --pretty --noEmit --incremental false",
+    "drop": "rm -rf node_modules && yarn",
+    "prepare": "husky install",
+    "gen:component": "cd tools/plops && yarn && plop"
+  },
+  "eslintConfig": {
+    "extends": [
+      "./eslintrc.json"
+    ]
+  },
+  "lint-staged": {
+    "*.@(ts|tsx)": [
+      "yarn lint",
+      "yarn format"
+    ]
+  },
+  "dependencies": {
+    "@emotion/css": "^11.9.0",
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "axios": "^0.27.2",
+    "emotion-normalize": "^11.0.1",
+    "next": "12.1.5",
+    "next-i18next": "^11.0.0",
+    "plop": "^3.1.0",
+    "react": "18.0.0",
+    "react-dom": "18.0.0",
+    "react-i18next": "^11.16.9",
+    "swr": "^1.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "17.0.25",
+    "@types/react": "18.0.5",
+    "@types/react-dom": "18.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.20.0",
+    "eslint": "8.13.0",
+    "eslint-config-next": "12.1.5",
+    "eslint-config-prettier": "^8.5.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.8",
+    "prettier": "^2.6.2",
+    "typescript": "4.6.3"
+  }
+}
